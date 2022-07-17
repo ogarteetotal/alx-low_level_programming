@@ -1,49 +1,41 @@
 #include "main.h"
 
 /**
- * print_times_table - Prints a multiplication table up to param
- * @n: The number to be treated
- * Return: Number matrix
+ * print_times_table - Prints the times table of the input,
+ * starting with 0.
+ * @n: The value of the times table to be printed.
  */
 
 void print_times_table(int n)
 
 {
-	int x, y, z;
-											if (n >= 0 && n <= 14)
+
+	int num, mult, prod;
+
+	if (n >= 0 && n <= 15)
 	{
-	for (x = 0; x <= n; x++)
+	for (num = 0; num <= n; num++)
 	{
-	for (y = 0; y <= n; y++)
-	{
-	z = x * y;
-	if (z > 99)
-	{
-	_putchar(',');
-	_putchar(32);
-	_putchar((z / 100) + '0');
-	_putchar(((z / 10) % 10) + '0');
-	_putchar((z % 10) + '0');
-	}
-	else if (z > 9)
+	_putchar('0');
+	for (mult = 1; mult <= n; mult++)
 	{
 	_putchar(',');
-	_putchar(32);
-	_putchar(32);
-	_putchar(((z / 10) % 10) + '0');
-	_putchar((z % 10) + '0');
-	}
-	else
+	_putchar(' ');
+	prod = num * mult;
+	if (prod <= 99)
+	_putchar(' ');
+	if (prod <= 9)
+	_putchar(' ');
+	if (prod >= 100)
 	{
-	if (y != 0)
+	_putchar((prod / 100) + '0');
+	_putchar(((prod / 10)) % 10 + '0');
+	}
+	else if (prod <= 99 && prod >= 10)
 	{
-	_putchar(',');
-	_putchar(32);
-	_putchar(32);
-	_putchar(32);
+	_putchar((prod / 10) + '0');
 	}
-	_putchar(z + '0');
-	}
+	_putchar((prod % 10) + '0');
 	}
 	_putchar('\n');
 	}
