@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
   * factorial - Calculate the factorial of a number
