@@ -28,6 +28,7 @@ int is_digit(char *s)
  * inside the loop we increment the value of i.
  * Returns: i which is equal to the length of the string.
  */
+
 int _strlen(char *s)
 {
     int i = 0;
@@ -67,7 +68,7 @@ int main(int argc, char *argv[])
 	len = len1 + len2 + 1;
 	result = malloc(sizeof(int) * len);
 	if (!result)
-		return (1);
+	return (1);
 	for (i = 0; i <= len1 + len2; i++)
 		result[i] = 0;
 	for (len1 = len1 - 1; len1 >= 0; len1--)
@@ -89,10 +90,10 @@ int main(int argc, char *argv[])
 		if (result[i])
 			a = 1;
 		if (a)
-			_putchar(result[i] + '0');
+		_putchar(result[i] + '0');
 	}
 	if (!a)
-		_putchar('0');
+	_putchar('0');
 	_putchar('\n');
 	free(result);
 	return (0);
