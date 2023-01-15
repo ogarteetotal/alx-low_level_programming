@@ -26,17 +26,16 @@ int is_digit(char *s)
  * It initializes an integer variable i to 0.
  * It uses a while loop that continues till the ith element of the string is not equal to null character \0, 
  * inside the loop we increment the value of i.
- * Finally it returns the value of i which is equal to the length of the string.
+ * Returns: i which is equal to the length of the string.
  */
 int _strlen(char *s)
 {
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+    int i = 0;
+    while (s[i] != '\0')
+    {
+        i++;
+    }
+    return (i);
 }
 
 /**
