@@ -22,10 +22,11 @@ int is_digit(char *s)
 }
 
 /**
- * _strlen - returns the length of a string
- * @s: string to evaluate
- *
- * Returnn: the length of the string
+ * The function _strlen takes a single argument s which is a pointer to a char type.
+ * It initializes an integer variable i to 0.
+ * It uses a while loop that continues till the ith element of the string is not equal to null character \0, 
+ * inside the loop we increment the value of i.
+ * Finally it returns the value of i which is equal to the length of the string.
  */
 int _strlen(char *s)
 {
